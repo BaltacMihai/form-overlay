@@ -8,7 +8,7 @@
       </div>
     </div>
 
-    <Btn text="How to use" type="secondary" icon="info" accent />
+    <Btn text="How to use" type="secondary" icon="info" accent @click="showHowTo" />
   </div>
 </template>
 
@@ -17,6 +17,11 @@ import Btn from '@/components/atoms/Btn.vue'
 export default {
   components: {
     Btn
+  },
+  methods: {
+    showHowTo() {
+      window.open('/HowTo.pdf', '_blank')
+    }
   }
 }
 </script>
@@ -41,7 +46,7 @@ export default {
     gap: 1rem;
 
     .navbar__logo {
-      width: 40px;
+      width: 60px;
     }
 
     .navbar__description {
